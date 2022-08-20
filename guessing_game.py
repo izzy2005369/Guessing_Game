@@ -7,7 +7,7 @@ def hint():
 
     over = 0
     limit = 10
-    user = ''
+    user = ""
     out_of_guesses = False
     points = 10
     total_scores = points
@@ -39,6 +39,8 @@ def hint():
 
     except ValueError:
         print("You inputted wrongly")
+    except KeyboardInterrupt:
+        print("\nYou cancelled the program")
 
 
 # calling the function
