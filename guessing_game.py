@@ -1,9 +1,8 @@
 import random
 
 
-def hint():
-    numbers = range(51)
-    guess = random.choice(numbers)
+def main():
+    guess = random.choice(range(51))
 
     over = 0
     limit = 10
@@ -23,18 +22,15 @@ def hint():
 
             # To give the player a hint
             if user > guess:
-                print("")
-                print("The number is lower than what you guessed, try again")
+                print("\nThe number is lower than what you guessed, try again")
             elif user < guess:
-                print("")
-                print("The number is greater than what you guessed, try again")
+                print("\nThe number is greater than what you guessed, try again")
 
         # if the player is out of guess
         if out_of_guesses:
             print('You have 0 score, You lose!.')
         else:  # The else statement is when the player guess right
-            print("\n")
-            print('You get the number correctly, You win!.')
+            print('\nYou get the number correctly, You win!.')
             print(f'It took you {over} guesses and your total scores is {points + 1} / {total_scores}')  # This is to print the number of guesses before getting it right,and also print out the player's scores
 
     except ValueError:
@@ -44,4 +40,5 @@ def hint():
 
 
 # calling the function
-hint()
+if __name__=="__main__":
+    main()
